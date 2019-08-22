@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{828D352B-2544-4A62-BAB0-2BC84C21BAF7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EfShop</RootNamespace>
+    <AssemblyName>EfShop</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\FrmCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\FrmCategory.Designer.cs">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Category\FrmCategoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Category\FrmCategoryEdit.Designer.cs">
+      <DependentUpon>FrmCategoryEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myShopDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myShopDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="myShopDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myShopDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FrmOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FrmOrder.Designer.cs">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Order\FrmOrderEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Order\FrmOrderEdit.Designer.cs">
+      <DependentUpon>FrmOrderEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\FrmProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\FrmProduct.Designer.cs">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\FrmProductEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\FrmProductEdit.Designer.cs">
+      <DependentUpon>FrmProductEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\FrmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\FrmUser.Designer.cs">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\FrmUserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\FrmUserEdit.Designer.cs">
+      <DependentUpon>FrmUserEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myShopDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myShopDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="myShopDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>myShopDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\FrmCategory.resx">
+      <DependentUpon>FrmCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Category\FrmCategoryEdit.resx">
+      <DependentUpon>FrmCategoryEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order\FrmOrder.resx">
+      <DependentUpon>FrmOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\FrmProduct.resx">
+      <DependentUpon>FrmProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\FrmProductEdit.resx">
+      <DependentUpon>FrmProductEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\FrmUser.resx">
+      <DependentUpon>FrmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\FrmUserEdit.resx">
+      <DependentUpon>FrmUserEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="myShopDataSet.xsc">
+      <DependentUpon>myShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="myShopDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myShopDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="myShopDataSet.xss">
+      <DependentUpon>myShopDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="myShopDataSet1.xsc">
+      <DependentUpon>myShopDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="myShopDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myShopDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="myShopDataSet1.xss">
+      <DependentUpon>myShopDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="myShopDataSet2.xsc">
+      <DependentUpon>myShopDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="myShopDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myShopDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="myShopDataSet2.xss">
+      <DependentUpon>myShopDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="myShopDataSet3.xsc">
+      <DependentUpon>myShopDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="myShopDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>myShopDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="myShopDataSet3.xss">
+      <DependentUpon>myShopDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{0b0fd592-1c0b-46d8-8cd3-4afd11aa011b}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
